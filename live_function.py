@@ -4,8 +4,10 @@ from datetime import datetime
 import requests
 
 # === TELEGRAM SETTINGS ===
-TELEGRAM_TOKEN = "7605615062:AAEPIqm0ZmhUJ7o1S-GgPiK1WSRikgwmhKM"
-TELEGRAM_CHAT_ID = "6404667335"
+# Enter own credentials
+
+TELEGRAM_TOKEN = "" 
+TELEGRAM_CHAT_ID = ""
 
 def send_telegram(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
@@ -183,3 +185,4 @@ def live_signal(flips_with_direction, prices, times, momentum, minimum_confidenc
                 with open(processed_flips_file, mode='a', newline='') as f:
                     writer = csv.writer(f)
                     writer.writerow([idx])
+
